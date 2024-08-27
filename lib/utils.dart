@@ -1,5 +1,3 @@
-// @author nateshmbhat created on 03,July,2020
-
 import 'package:card_scanner/card_scanner.dart';
 
 class CardUtils {

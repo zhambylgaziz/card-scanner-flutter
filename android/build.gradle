@@ -1,40 +1,42 @@
-group 'com.nateshmbhat.card_scanner'
-version '1.0'
-
 buildscript {
     ext {
-        kotlin_version = "1.3.72"
+        kotlin_version = "1.7.0"
     }
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
-
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.0'
+        classpath 'com.android.tools.build:gradle:8.2.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
-rootProject.allprojects {
-    repositories {
-        google()
-        jcenter()
-    }
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
 }
 
-apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android'
+group 'kz.bcc.card_scanner'
+version '1.0'
 
 android {
-    compileSdkVersion 28
+    namespace "kz.bcc.card_scanner"
+    compileSdkVersion 34
 
     defaultConfig {
         minSdkVersion 21
+        targetSdkVersion 34
     }
+
     lintOptions {
         disable 'InvalidPackage'
     }
+}
+
+repositories {
+    google()
+    mavenCentral()
 }
 
 dependencies {
@@ -43,10 +45,10 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'com.google.android.gms:play-services-mlkit-text-recognition:18.0.2'
 
-// CameraX core library using camera2 implementation
+    // CameraX core library using camera2 implementation
     implementation "androidx.camera:camera-camera2:1.1.0-alpha01"
-// CameraX Lifecycle Library
+    // CameraX Lifecycle Library
     implementation "androidx.camera:camera-lifecycle:1.1.0-alpha01"
-// CameraX View class
+    // CameraX View class
     implementation "androidx.camera:camera-view:1.0.0-alpha21"
 }

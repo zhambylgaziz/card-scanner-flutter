@@ -1,9 +1,8 @@
-package com.nateshmbhat.card_scanner.scanner_core.optimizer
+package kz.bcc.card_scanner.scanner_core.optimizer
 
-import android.util.Log
-import com.nateshmbhat.card_scanner.logger.debugLog
-import com.nateshmbhat.card_scanner.scanner_core.models.CardDetails
-import com.nateshmbhat.card_scanner.scanner_core.models.CardScannerOptions
+import kz.bcc.card_scanner.logger.debugLog
+import kz.bcc.card_scanner.scanner_core.models.CardDetails
+import kz.bcc.card_scanner.scanner_core.models.CardScannerOptions
 
 class CardDetailsScanOptimizer(private val _scannerOptions: CardScannerOptions) {
   private val _expiryDateFrequency: MutableMap<String, Int> = mutableMapOf()

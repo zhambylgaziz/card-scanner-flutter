@@ -1,11 +1,11 @@
-package com.nateshmbhat.card_scanner
+package kz.bcc.card_scanner
 
 import com.google.mlkit.vision.text.Text
-import com.nateshmbhat.card_scanner.scanner_core.models.CardDetails
-import com.nateshmbhat.card_scanner.scanner_core.models.CardScannerOptions
-import com.nateshmbhat.card_scanner.scanner_core.scan_filters.CardHolderNameFilter
-import com.nateshmbhat.card_scanner.scanner_core.scan_filters.CardNumberFilter
-import com.nateshmbhat.card_scanner.scanner_core.scan_filters.ExpiryDateFilter
+import kz.bcc.card_scanner.scanner_core.models.CardDetails
+import kz.bcc.card_scanner.scanner_core.models.CardScannerOptions
+import kz.bcc.card_scanner.scanner_core.scan_filters.CardHolderNameFilter
+import kz.bcc.card_scanner.scanner_core.scan_filters.CardNumberFilter
+import kz.bcc.card_scanner.scanner_core.scan_filters.ExpiryDateFilter
 
 class SingleFrameCardScanner(private val scannerOptions: CardScannerOptions) {
   fun scanSingleFrame(visionText: Text): CardDetails? {

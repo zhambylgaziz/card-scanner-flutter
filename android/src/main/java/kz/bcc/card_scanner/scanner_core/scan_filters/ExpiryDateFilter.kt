@@ -1,8 +1,11 @@
-package com.nateshmbhat.card_scanner.scanner_core.scan_filters
+package kz.bcc.card_scanner.scanner_core.scan_filters
 
 import com.google.mlkit.vision.text.Text
-import com.nateshmbhat.card_scanner.scanner_core.constants.CardScannerRegexps
-import com.nateshmbhat.card_scanner.scanner_core.models.*
+import kz.bcc.card_scanner.scanner_core.constants.CardScannerRegexps
+import kz.bcc.card_scanner.scanner_core.models.CardNumberScanResult
+import kz.bcc.card_scanner.scanner_core.models.CardScannerOptions
+import kz.bcc.card_scanner.scanner_core.models.ExpiryDateScanResult
+import kz.bcc.card_scanner.scanner_core.models.ScanFilter
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.math.min
@@ -26,8 +29,10 @@ class ExpiryDateFilter(visionText: Text, scannerOptions: CardScannerOptions, pri
       for (match in expiryDateRegex.findAll(block.text)) {
         val expiryDate = match.groupValues[0].trim().replace(Regex("\\s+"), "")
         if (_isValidExpiryDate(expiryDate)) {
-          scanResults.add(ExpiryDateScanResult(
-                  textBlockIndex = index, textBlock = block, expiryDate = expiryDate, visionText = visionText));
+          scanResults.add(
+              ExpiryDateScanResult(
+                  textBlockIndex = index, textBlock = block, expiryDate = expiryDate, visionText = visionText)
+          );
         }
       }
       if (scanResults.size > 2) break;

@@ -1,5 +1,3 @@
-// @author nateshmbhat created on 02,July,2020
-
 enum CardIssuer {
   visa,
   mastercard,

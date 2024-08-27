@@ -1,13 +1,10 @@
-package com.nateshmbhat.card_scanner;
+package kz.bcc.card_scanner;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 
 import androidx.annotation.NonNull;
-
-import com.nateshmbhat.card_scanner.scanner_core.models.CardDetails;
-import com.nateshmbhat.card_scanner.scanner_core.models.CardScannerOptions;
 
 import java.util.Map;
 
@@ -19,6 +16,8 @@ import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry;
+import kz.bcc.card_scanner.scanner_core.models.CardDetails;
+import kz.bcc.card_scanner.scanner_core.models.CardScannerOptions;
 
 /**
  * CardScannerPlugin
@@ -32,7 +31,7 @@ public class CardScannerPlugin implements FlutterPlugin, MethodCallHandler, Acti
     /// when the Flutter Engine is detached from the Activity
     public static MethodChannel channel;
 
-    public final static String METHOD_CHANNEL_NAME = "nateshmbhat/card_scanner";
+    public final static String METHOD_CHANNEL_NAME = "bcc/card_scanner";
     private Context context;
     private Result pendingResult;
 

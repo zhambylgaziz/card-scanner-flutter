@@ -1,4 +1,4 @@
-package com.nateshmbhat.card_scanner.scanner_core
+package kz.bcc.card_scanner.scanner_core
 
 import android.annotation.SuppressLint
 import android.os.CountDownTimer
@@ -6,13 +6,13 @@ import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.ImageProxy
 import com.google.mlkit.vision.common.InputImage
 import com.google.mlkit.vision.text.TextRecognition
-import com.nateshmbhat.card_scanner.SingleFrameCardScanner
-import com.nateshmbhat.card_scanner.logger.debugLog
-import com.nateshmbhat.card_scanner.onCardScanFailed
-import com.nateshmbhat.card_scanner.onCardScanned
-import com.nateshmbhat.card_scanner.scanner_core.models.CardDetails
-import com.nateshmbhat.card_scanner.scanner_core.models.CardScannerOptions
-import com.nateshmbhat.card_scanner.scanner_core.optimizer.CardDetailsScanOptimizer
+import kz.bcc.card_scanner.SingleFrameCardScanner
+import kz.bcc.card_scanner.logger.debugLog
+import kz.bcc.card_scanner.onCardScanFailed
+import kz.bcc.card_scanner.onCardScanned
+import kz.bcc.card_scanner.scanner_core.models.CardDetails
+import kz.bcc.card_scanner.scanner_core.models.CardScannerOptions
+import kz.bcc.card_scanner.scanner_core.optimizer.CardDetailsScanOptimizer
 import com.google.mlkit.vision.text.latin.TextRecognizerOptions
 
 

@@ -31,17 +31,17 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
-    compileSdkVersion 28
+    namespace "kz.bcc.card_scanner_example"
+    compileSdkVersion 34
 
     lintOptions {
         disable 'InvalidPackage'
     }
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.nateshmbhat.card_scanner_example"
+        applicationId "kz.bcc.card_scanner_example"
         minSdkVersion 21
-        targetSdkVersion 29
+        targetSdkVersion 34
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }

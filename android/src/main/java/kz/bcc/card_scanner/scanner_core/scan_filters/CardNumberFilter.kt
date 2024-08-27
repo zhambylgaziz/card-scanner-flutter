@@ -1,11 +1,11 @@
-package com.nateshmbhat.card_scanner.scanner_core.scan_filters
+package kz.bcc.card_scanner.scanner_core.scan_filters
 
 import com.google.mlkit.vision.text.Text
-import com.nateshmbhat.card_scanner.logger.debugLog
-import com.nateshmbhat.card_scanner.scanner_core.constants.CardScannerRegexps
-import com.nateshmbhat.card_scanner.scanner_core.models.CardNumberScanResult
-import com.nateshmbhat.card_scanner.scanner_core.models.CardScannerOptions
-import com.nateshmbhat.card_scanner.scanner_core.models.ScanFilter
+import kz.bcc.card_scanner.logger.debugLog
+import kz.bcc.card_scanner.scanner_core.constants.CardScannerRegexps
+import kz.bcc.card_scanner.scanner_core.models.CardNumberScanResult
+import kz.bcc.card_scanner.scanner_core.models.CardScannerOptions
+import kz.bcc.card_scanner.scanner_core.models.ScanFilter
 
 class CardNumberFilter(visionText: Text, scannerOptions: CardScannerOptions) : ScanFilter(visionText, scannerOptions) {
   private val cardNumberRegex: Regex = Regex(CardScannerRegexps.cardNumberRegex, RegexOption.MULTILINE)

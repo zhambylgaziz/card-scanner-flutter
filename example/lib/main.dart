@@ -1,10 +1,8 @@
-import 'dart:math';
-
-import 'package:card_scanner_example/scan_option_configure_widget/scan_option_configure_widget.dart';
-import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:card_scanner/card_scanner.dart';
+import 'package:card_scanner_example/scan_option_configure_widget/scan_option_configure_widget.dart';
+import 'package:flutter/material.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +14,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  CardDetails _cardDetails;
+  CardDetails? _cardDetails;
   CardScanOptions scanOptions = CardScanOptions(
     scanCardHolderName: true,
     // enableDebugLogs: true,
@@ -30,7 +28,7 @@ class _MyAppState extends State<MyApp> {
     var cardDetails = await CardScanner.scanCard(scanOptions: scanOptions);
     if (!mounted) return;
     setState(() {
-      _cardDetails = cardDetails;
+      _cardDetails = cardDetails!;
     });
   }
 
@@ -45,7 +43,7 @@ class _MyAppState extends State<MyApp> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              RaisedButton(
+              ElevatedButton(
                 onPressed: () async {
                   scanCard();
                 },
